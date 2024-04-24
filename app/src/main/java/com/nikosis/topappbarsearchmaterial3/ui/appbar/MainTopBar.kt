@@ -20,9 +20,9 @@ fun MainTopBar(
                 onSearchClicked = onAppBarSearchClicked,
                 onShareClicked = { /*TODO*/ },
                 onProfileClicked = { /*TODO*/ },
-                onSettingsClicked = { /*TODO*/ }) {
-
-            }
+                onSettingsClicked = { /*TODO*/ },
+                onAboutClicked = { /*TODO*/ },
+            )
         }
 
         SearchBarState.OPENED -> {

@@ -107,7 +107,7 @@ private fun TopBarPreview() {
             onShareClicked = { /*TODO*/ },
             onProfileClicked = { /*TODO*/ },
             onSettingsClicked = { /*TODO*/ },
-            onAboutClicked = { /*TODO*/ }
+            onAboutClicked = { /*TODO*/ },
         )
     }
 }

@@ -1,12 +1,15 @@
 package com.nikosis.topappbarsearchmaterial3.ui.screens.mainscreen
 
 import android.util.Log
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 import com.nikosis.topappbarsearchmaterial3.ui.appbar.MainTopBar
 import com.nikosis.topappbarsearchmaterial3.ui.appbar.MainViewModel
 import com.nikosis.topappbarsearchmaterial3.ui.appbar.components.SearchBarState
@@ -16,7 +19,8 @@ fun MainScreen(mainViewModel: MainViewModel) {
     val searchBarState by mainViewModel.searchBarState
     val searchTextState by mainViewModel.searchTextState
 
-    Scaffold(
+    Scaffold(modifier = Modifier
+        .fillMaxSize(),
         topBar = {
             MainTopBar(
                 searchBarState = searchBarState,
@@ -39,8 +43,11 @@ fun MainScreen(mainViewModel: MainViewModel) {
         LazyColumn(
             modifier = Modifier
                 .padding(paddingValues)
+                .fillMaxSize()
         ) {
-
+            items(100) {
+                Text(modifier = Modifier.padding(16.dp), text = "Example Item $it")
+            }
         }
     }
 }
